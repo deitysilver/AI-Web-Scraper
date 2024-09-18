@@ -34,11 +34,11 @@ if site_url:
         streamlit.divider()
         
 
-        streamlit.subheader("Chat With Your Data")
+        streamlit.header("Chat With Your Data")
         prompt = streamlit.text_input("Enter Prompt: ")
 
         if streamlit.button("Ask Anything"):
-            streamlit.divider()
+            streamlit.subheader("Response:")
             response = generate("\n This is the data: \n" + site_content + "\n And this is the prompt" + prompt)
             streamlit.write(response)
 
